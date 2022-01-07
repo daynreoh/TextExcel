@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"Cell"},{"p":"<Unnamed>","l":"ExcelBase"},{"p":"<Unnamed>","l":"ExcelEngine"},{"p":"<Unnamed>","l":"Grid"},{"p":"<Unnamed>","l":"GridBase"}];updateSearchResults();

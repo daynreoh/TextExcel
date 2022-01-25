@@ -13,6 +13,8 @@ This project will automatically create a grid of cells with row = 10, column = 7
  - CLEAR (column)(row) [ex CLEAR A1]: this will clear the value of the cell the user specifies.
  - PRINT: this will print the entire grid or text excel sheet at any point. All cells that you have set values to will be displayed in their correct location with their display value. 
  - SAVE 
+ - SUM
+ - AVG
  - CLEAR: this will clear the entire grid and set the values of each cell to NULL.
  - QUIT: this will exit you out of the program.
   
@@ -29,6 +31,10 @@ This class and it's subclasses handle all of the functionality within an individ
 It is worthwhile to note that there is one private variable in the Cell class that represents the expression taken in from the terminal when assigning the specified cells value. For privacy purposes and to ensure that the class is understood at a high-level, there are getter and setter methods to access this expression. Also, the NumberCell class is quite complicated because it includes all the functions necessary to evaluate multi-operator expressions, including calls to other cell values. The basic functionality for computing this is by converting the input expression into an array with each token being a character that is separated by white spaces (white space is the delimeter). When computing expressions, the program will not use PEMDAS unfortunately. Also, when evaluating the complex expressions the program uses lazy evaluation, meaning the expression avoids being evaluated until absolutely necessary, so the code and functionality is cleaner.
   
 Grid Class
+
+This class is in charge of handling and distributing the functions necessary to run the commands that the user requested at the command-line. Each command has a unique set of tools used to execute the features that are involved to the respective command, some commands overlap functions. Since the Grid class is in charge of executing the commands, it uses the public functions from other classes in order to do so. Additionally, this class overwrites the default constructor and calls a function that creates a 2D array which is used to store all the data points of the excel grid during the programs execution. The constructor is only called once because there is only one Grid class object used during program execution so the 2D array will be instantiated using the default row and column values of 10 and 7, respectively. This means that when you change the value of row and column, it will only change the printed representation of the excel sheet but won't change the max amount of values that the 2D array can store, therefore making this excel sheet limited in size.
+
+
   
   
 

@@ -34,6 +34,25 @@ Grid Class
 
 This class is in charge of handling and distributing the functions necessary to run the commands that the user requested at the command-line. Each command has a unique set of tools used to execute the features that are involved to the respective command, some commands overlap functions. Since the Grid class is in charge of executing the commands, it uses the public functions from other classes in order to do so. Additionally, this class overwrites the default constructor and calls a function that creates a 2D array which is used to store all the data points of the excel grid during the programs execution. The constructor is only called once because there is only one Grid class object used during program execution so the 2D array will be instantiated using the default row and column values of 10 and 7, respectively. This means that when you change the value of row and column, it will only change the printed representation of the excel sheet but won't change the max amount of values that the 2D array can store, therefore making this excel sheet limited in size.
 
+ExcelEngine Class
+
+This is the main setup class for this project. It is responsible for instantiating the Grid and ExcelEngine objects used during each execution of the program. It also is an extension of ExcelBase which is a class that takes in the input string by the user from the terminal and processes it into a public function. processCommand() is the function signature and it returns a string of the current command inputted so that the Grid class can call the function to get the inputted string and interpret the command from there. Addtionally, it loops the "Enter: " statement that is printed so that the user can input as many commands as they want until they type "quit". There are two commands that are dealt with in the ExcelEngine class. The first is the "HELP" command and the second is the "LOAD" command which loads a file and processes it's contents (assuming it's contents only contain commands for the program to run). Finally, this class has the main function in it, where it instantiates the Grid object and the ExcelEngine object during every execution. These objects are only created once.
+
+Extra Notes
+ - There is a testing command that was implemented by my instructor, Jeffery Stride. The command is prompted by "test <"name of test">" and will test a pre-determined set of cases, including both normal and edge cases. The most useful test to run and examine is "test final" which will display all the commands and different expression and Cell representations it can take. This test will give you a better idea as to the complexity and diversity of this project so I recommend running it!
+ - Often times when running the program manually without using pre-made tests or loading files that have commands in them, the user will encounter bugs. These bugs are normally in the form of various exceptions and errors at run-time. These aren't actually bugs because the program works how it was designed to work but they are similar to boundaries that the text excel sheet has. When getting an error it is likely that you did some sort of command combination that was illegal, an expression that couldn't be interpreted, or a msitake in the syntax of each command when typing it in the terminal. An example of this would be a command such as
+c2 = (a1 + b1), where a1 = 10 and b1 = "hello". The program will not be able to user integer arithmetic when using strings even though the string has an ASCII value. 
+ - Attached below is a UML diagram of the classes which shows the implementation and inheritence within the program. I created this manually.
+
+
+
+
+
+
+Thank you for reading this and have fun using TextExcel!
+
+- Dayn 
+
 
   
   

@@ -41,10 +41,11 @@ This is the main setup class for this project. It is responsible for instantiati
 Extra Notes
  - There is a testing command that was implemented by my instructor, Jeffery Stride. The command is prompted by "test <"name of test">" and will test a pre-determined set of cases, including both normal and edge cases. The most useful test to run and examine is "test final" which will display all the commands and different expression and Cell representations it can take. This test will give you a better idea as to the complexity and diversity of this project so I recommend running it!
  - Often times when running the program manually without using pre-made tests or loading files that have commands in them, the user will encounter bugs. These bugs are normally in the form of various exceptions and errors at run-time. These aren't actually bugs because the program works how it was designed to work but they are similar to boundaries that the text excel sheet has. When getting an error it is likely that you did some sort of command combination that was illegal, an expression that couldn't be interpreted, or a msitake in the syntax of each command when typing it in the terminal. An example of this would be a command such as
-c2 = (a1 + b1), where a1 = 10 and b1 = "hello". The program will not be able to user integer arithmetic when using strings even though the string has an ASCII value. 
- - Attached below is a UML diagram of the classes which shows the implementation and inheritence within the program. I created this manually.
+c2 = (a1 + b1), where a1 = 10 and b1 = "hello". The program will not be able to user integer arithmetic when using strings even though the string has an ASCII value. This is because b1 is represented as a TextCell while a1 is represented as a NumberCell. 
+ - Attached below is a UML diagram of the classes which shows the implementation and inheritence within the program. I created this.
 
 
+<img width="995" alt="Text Excel UML Diagram" src="https://user-images.githubusercontent.com/89550841/150904842-e6c6db6d-b07c-4bc5-b38b-ace9f7c0f1c2.png">
 
 
 
